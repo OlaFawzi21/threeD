@@ -121,24 +121,11 @@ export class ThreeComponent implements OnInit, AfterViewInit {
     this.camera.position.x = 100;
     this.camera.position.y = 100;
     this.camera.position.z = 100;
-    this.ambientLight = new THREE.AmbientLight(0xffffff, 100);
+    this.ambientLight = new THREE.AmbientLight(0xffffff, 1);
     this.scene.add(this.ambientLight);
-    this.directionalLight = new THREE.DirectionalLight(0xffffff, 0.4);
+    this.directionalLight = new THREE.DirectionalLight(0xf0f0f0);
     this.directionalLight.position.set(0, 1, 0);
-    this.directionalLight.castShadow = true;
     this.scene.add(this.directionalLight);
-    this.light1 = new THREE.PointLight(0x4b371c, 10);
-    this.light1.position.set(0, 200, 400);
-    this.scene.add(this.light1);
-    this.light2 = new THREE.PointLight(0x4b371c, 10);
-    this.light2.position.set(500, 100, 0);
-    this.scene.add(this.light2);
-    this.light3 = new THREE.PointLight(0x4b371c, 10);
-    this.light3.position.set(0, 100, -500);
-    this.scene.add(this.light3);
-    this.light4 = new THREE.PointLight(0x4b371c, 10);
-    this.light4.position.set(-500, 300, 500);
-    this.scene.add(this.light4);
   }
 
   private getAspectRatio() {
